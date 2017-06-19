@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'pages/index'
-  resources :bank_accounts do
 
+  resources :bank_accounts
+
+  resources :clients do
+    resources :bank_accounts, controller: "clients/bank_accounts"
   end
 
   namespace :api do

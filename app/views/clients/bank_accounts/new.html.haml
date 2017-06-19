@@ -1,0 +1,4 @@
+%h1
+  New Bank account for #{@client}
+
+= render partial: "form", locals: {client: @client, bank_account: @bank_account }
